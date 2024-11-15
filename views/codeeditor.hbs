@@ -1,0 +1,50 @@
+{{!-- codeeditor.hbs --}}
+{{#> layouts/main}}
+
+<section id="code-editor">
+    <div class="container">
+        <h2>JAVA Code Editor</h2>
+        <div id="editor" style="height: 300px; width: 100%;"></div>
+        <button id="runButton">Run</button>
+        <pre id="output"></pre>
+    </div>
+</section>
+
+<script src="/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    // Initialize Ace Editor (wrapped in DOMContentLoaded event listener)
+    document.addEventListener('DOMContentLoaded', (event) => {
+        var editor = ace.edit("editor");
+        editor.setTheme("ace/theme/twilight");
+        editor.session.setMode("ace/mode/java");
+
+        editor.setValue(`public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}`);
+
+        // Add event listener to the "Run" button
+        document.getElementById('runButton').addEventListener('click', function() {
+            var code = editor.getValue();
+            fetch('/run', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ code: code })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    document.getElementById('output').innerText = data.error;
+                } else {
+                    document.getElementById('output').innerText = data.output;
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    });
+</script>
+
+{{/layouts/main}}

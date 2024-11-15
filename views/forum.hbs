@@ -1,0 +1,24 @@
+{{!-- forum.hbs --}}
+{{#> layouts/main}}
+
+<link rel="stylesheet" href="/css/forum.css">
+
+<section id="forum">
+    <div class="container">
+        <h2>
+            InstaDevOne Disucssion Forum
+        </h2>
+
+        {{#each categories as |category|}}
+        <h3>{{category}}</h3>
+        <a href="/forum/category/{{category}}">View Topics in {{category}}</a>
+        {{#if username}} 
+        <a href="/forum/create-topic/{{category}}" class="btn btn-primary">
+            Create New Topic
+        </a>
+        {{/if}}
+        {{/each}}
+    </div>
+</section>
+
+{{/layouts/main}}

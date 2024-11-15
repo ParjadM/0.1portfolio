@@ -1,0 +1,30 @@
+{{!-- category.hbs --}}
+{{#> layouts/main}} 
+
+<link rel="stylesheet" href="/css/forum.css"> 
+
+<section id="category">
+    <div class="container">
+        <h2>{{category}}</h2> 
+
+        <a href="/forum/create-topic/{{category}}">Create New Topic in {{category}}</a>
+        <br>
+        <br>
+        <hr>
+        <br>
+        <ul class="topics-list">
+            {{#if topics.length}}
+                {{#each topics}}
+                    <li>
+                        <h3><a href="/forum/topic/{{_id}}">{{title}}</a></h3> 
+                        <p>Created by: {{createdBy}} on {{formatDate createdAt}}</p> 
+                    </li>
+                {{/each}}
+            {{else}}
+                <p>No topics in this category yet.</p>
+            {{/if}}
+        </ul>
+    </div>
+</section>
+
+{{/layouts/main}}
