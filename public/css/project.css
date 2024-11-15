@@ -1,0 +1,58 @@
+/* project.css */
+
+#projects {
+    padding: 40px 0; /* Add padding to the section */
+    background-color: #f5f5f5; /* Light gray background */
+  }
+  
+  #projects h2 {
+    color: #333; /* Dark gray heading color */
+    text-align: center; /* Center the heading */
+    margin-bottom: 30px;
+  }
+  
+  .project {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+  }
+  
+  .project h3 {
+    margin-top: 0;
+  }
+  
+  .project img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  .project a {
+    display: inline-block; /* Make links block-level for better styling */
+    background-color: #007bff; /* Blue background */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 10px; /* Add spacing between links */
+  }
+  
+  .project a:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Media Queries for Responsiveness */
+  
+  @media (max-width: 768px) {
+    .project {
+      padding: 15px; /* Reduce padding on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .project {
+      padding: 10px; /* Further reduce padding on phones */
+    }
+  }

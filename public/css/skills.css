@@ -1,0 +1,42 @@
+/* skills.css (or add to body.css) */
+
+#skills {
+    padding: 40px 0; /* Add padding to the section */
+    background-color: #f5f5f5; /* Light gray background */
+}
+
+#skills h2 {
+    color: #333; /* Dark gray heading color */
+    text-align: center; /* Center the heading */
+    margin-bottom: 30px;
+}
+
+#skills ul {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Add spacing between skill items */
+}
+
+#skills li {
+    background-color: white; /* White background for skill items */
+    padding: 20px;
+    border-radius: 5px; /* Add rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center; /* Center text within skill items */
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 768px) {
+    #skills ul {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust column width for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    #skills ul {
+        grid-template-columns: 1fr; /* Single column on phones */
+    }
+}

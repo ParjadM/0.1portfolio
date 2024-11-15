@@ -1,0 +1,28 @@
+/* forum.css */
+
+.topics-list {
+    list-style: none;
+    padding: 0;
+}
+
+.topics-list li {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#forum a.btn-primary {
+    display: inline-block;   /* Make the link behave like a block element */
+    background-color: #007bff; /* Primary blue color */
+    color: white;
+    border: none;
+    padding: 10px 20px;        /* Adjust padding as needed */
+    border-radius: 5px;
+    text-decoration: none;     /* Remove underline from the link */
+    font-weight: bold;          /* Make the text bold */
+    transition: background-color 0.3s ease; /* Add a smooth transition on hover */
+  }
+  
+  #forum a.btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }

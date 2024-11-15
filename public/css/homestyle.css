@@ -1,0 +1,104 @@
+/* General Styles */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333; /* Dark gray text */
+}
+
+/* Header Styles */
+header {
+    background-color: #f0f0f0; /* Light gray background */
+    padding: 20px;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+    max-width: 960px; /* Optional: Limit content width for readability */
+    margin: 0 auto; /* Center the content horizontally */
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #007bff; 
+}
+
+/* Project Styles */
+.project {
+    border: 1px solid #ccc; 
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Skills Styles */
+#skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Styles for tablets and smaller screens */
+@media (max-width: 768px) {
+    main {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    h1 {
+        font-size: 28px; /* Adjust heading sizes */
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .project {
+        padding: 10px; /* Reduce padding in project cards */
+    }
+}
+
+/* Styles for phones */
+@media (max-width: 480px) {
+    main {
+        max-width: 100%; /* Allow content to take full width on phones */
+        padding: 5px; /* Further reduce padding on phones */
+    }
+
+    h1 {
+        font-size: 24px; 
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 13px;
+    }
+
+    .project {
+        padding: 5px; /* Further reduce padding in project cards */
+    }
+}

@@ -1,0 +1,93 @@
+/* footer.css */
+
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#main {
+    flex: 1;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(120deg, #f67280, #c06c84, #6c5b7b, white);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+footer .logo-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex; /* Enable flexbox for centering */
+    align-items: center; /* Vertically center the image */
+    justify-content: center; /* Horizontally center the image */
+    padding: 10px; /* Add some padding around the image */
+}
+
+footer .logo-container img {
+    width: 50px; 
+    height: auto;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Styles for tablets and smaller screens */
+@media (max-width: 768px) {
+    footer {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    footer p {
+        font-size: 14px; /* Adjust font size */
+    }
+
+    footer .logo-container {
+        bottom: 5px;  /* Adjust logo position */
+        right: 5px;
+    }
+
+    footer .logo-container img {
+        width: 50px; /* Reduce logo size */
+    }
+}
+
+/* Styles for phones */
+@media (max-width: 480px) {
+    footer {
+        padding: 5px; /* Further reduce padding on phones */
+    }
+
+    footer p {
+        font-size: 12px; 
+    }
+
+    footer .logo-container img {
+        width: 40px; 
+    }
+}

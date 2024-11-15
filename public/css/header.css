@@ -1,0 +1,128 @@
+/* Center header content */
+header {
+  justify-content: space-between; 
+  align-items: center;
+  padding: 20px;
+  background-color: white; 
+
+  /* Holographic gradient background (optional) */
+  background: linear-gradient(120deg, #f67280, #c06c84, #6c5b7b, white);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%; 
+  z-index: 1000; 
+}
+
+header .row {
+  display: flex;
+  justify-content: space-between; 
+  width: 100%;
+}
+
+header .home-button {
+  /* Style the Home text like a button */
+  background-color: transparent;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+header .home-button:hover {
+  color: #555;
+}
+
+header .home-button span {
+  font-family: 'Arial Narrow', Arial, sans-serif; 
+  font-size: 20px; 
+  letter-spacing: 1px;
+  color: white;
+}
+
+header .other-buttons {
+  display: flex;
+  justify-content: flex-end; 
+  margin-left: auto; 
+  margin-right: 100px;
+}
+
+header .btn {
+  background-color: transparent;
+  color: #333; 
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px; 
+  cursor: pointer;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+header .btn:hover {
+  color: #555; 
+}
+
+@keyframes gradientAnimation {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+header img {
+  max-width: 75px;
+  max-height: 75px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Styles for tablets and smaller screens */
+@media (max-width: 768px) {
+  header {
+      padding: 10px; /* Reduce padding on smaller screens */
+  }
+
+  header .btn, header .home-button span {
+      font-size: 14px; /* Decrease font size */
+      padding: 8px 12px;
+  }
+
+  header .other-buttons {
+      margin-right: 20px; /* Adjust margin on smaller screens */
+  }
+}
+
+/* Styles for phones */
+@media (max-width: 480px) { 
+  header .row {
+      flex-direction: column; /* Stack elements vertically */
+      align-items: flex-start; /* Align items to the start (left) */
+  }
+
+  header .btn, header .home-button span {
+      width: 100%;
+      margin-bottom: 5px;
+      text-align: left; /* Align text to the left */
+  }
+
+  header .other-buttons {
+      margin-left: 0; /* Reset margin-left on phones */
+      margin-right: 0;
+  }
+}
+
+header .username {
+  margin-left: 20px; /* Add some spacing */
+  font-weight: bold;
+}
