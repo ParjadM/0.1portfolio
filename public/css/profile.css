@@ -1,0 +1,39 @@
+/* profile.css */
+
+#profile {
+    padding: 40px 0;
+    background-color: #f5f5f5;
+}
+
+#profile h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-info .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.profile-info label {
+    flex: 0 0 120px; /* Set a fixed width for labels */
+    font-weight: bold;
+}
+
+.profile-info span {
+    flex: 1 0 auto; /* Allow the span to grow and take remaining space */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .profile-info .form-group {
+        flex-direction: column; /* Stack labels and values vertically */
+        align-items: flex-start; 
+    }
+
+    .profile-info label {
+        margin-bottom: 5px;
+    }
+}

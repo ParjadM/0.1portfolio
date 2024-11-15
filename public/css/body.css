@@ -1,0 +1,83 @@
+/* body.css */
+
+body {
+    font-family: 'Arial', sans-serif; 
+    line-height: 1.6; 
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; 
+    color: #333; 
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/* Basic styling for main content area */
+main {
+    padding: 20px;
+    max-width: 960px; 
+    margin: 80px auto 0; 
+    flex: 1 0 auto;
+}
+
+/* Style headings */
+h1, h2, h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Style paragraphs */
+p {
+    margin-bottom: 15px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Styles for tablets and smaller screens */
+@media (max-width: 768px) {
+    main {
+        padding: 10px; /* Reduce padding on smaller screens */
+        margin-top: 60px;
+    }
+
+    h1 {
+        font-size: 28px; /* Adjust heading sizes */
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
+
+/* Styles for phones */
+@media (max-width: 480px) {
+    main {
+        max-width: 100%; 
+        padding: 5px; 
+        margin-top: 50px; 
+    }
+
+    h1 {
+        font-size: 24px; 
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,52 @@
+/* create-topic.css */
+
+#create-topic {
+    padding: 40px 0; /* Add some top and bottom padding */
+    background-color: #f5f5f5; /* Light gray background */
+}
+
+#create-topic h2 {
+    color: #333; /* Dark gray color */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#create-topic .form-group {
+    margin-bottom: 20px;
+}
+
+#create-topic label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#create-topic input[type="text"],
+#create-topic textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+}
+
+#create-topic button[type="submit"] {
+    background-color: #007bff; /* Blue background */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#create-topic button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 768px) {
+    #create-topic .form-group {
+        margin-bottom: 15px; /* Reduce spacing on smaller screens */
+    }
+}

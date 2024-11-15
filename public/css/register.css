@@ -1,0 +1,55 @@
+/* register.css */
+
+#register {
+    padding: 40px 0; /* Add padding to the section */
+    background-color: #f5f5f5; /* Light gray background */
+  }
+  
+  #register h2 {
+    color: #333; /* Dark gray heading color */
+    text-align: center; /* Center the heading */
+    margin-bottom: 30px;
+  }
+  
+  #register .form-group {
+    margin-bottom: 20px;
+  }
+  
+  #register label {
+    display: block; /* Make labels block-level for better spacing */
+    margin-bottom: 5px;
+  }
+  
+  #register input[type="text"],
+  #register input[type="email"],
+  #register input[type="password"],
+  #register input[type="date"],
+  #register select,
+  #register textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Add rounded corners */
+    box-sizing: border-box; /* Include padding and border in the total width */
+  }
+  
+  #register button[type="submit"] {
+    background-color: #007bff; /* Blue background */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #register button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Media Queries for Responsiveness */
+  
+  @media (max-width: 768px) {
+    #register .form-group {
+      margin-bottom: 15px; /* Reduce spacing on smaller screens */
+    }
+  }

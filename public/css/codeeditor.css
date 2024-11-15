@@ -1,0 +1,18 @@
+/* codeeditor.css */
+
+#code-editor {
+    padding: 40px 0; /* Add some top and bottom padding to the section */
+    background-color: #f5f5f5; /* Light gray background */
+}
+
+#code-editor h2 {
+    color: #333; /* Dark gray heading color */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#editor { 
+    border: 1px solid #ccc; /* Add a subtle border to the editor */
+    border-radius: 5px;      /* Add rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}

@@ -1,0 +1,32 @@
+{{!-- forum-topic.hbs --}}
+{{#> layouts/main}} 
+
+<link rel="stylesheet" href="/css/forum-topic.css"> 
+
+<section id="forum-topic">
+    <div class="container">
+        <h2>{{topic.title}}</h2>
+        <p>Created by: {{topic.createdBy}} on {{formatDate topic.createdAt}}</p>
+
+        <ul class="posts-list">
+            {{#each topic.posts}}
+                <li>
+                    <p>{{content}}</p>
+                    <p>Posted by: {{createdBy}} on {{formatDate createdAt}}</p>
+                </li>
+            {{/each}}
+        </ul>
+
+        {{#if username}} 
+            <form action="/forum/topic/{{topic._id}}/reply" method="POST">
+                <div class="form-group">
+                    <label for="replyContent">Your Reply:</label>
+                    <textarea id="replyContent" name="replyContent" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Post Reply</button>
+            </form>
+        {{/if}}
+    </div>
+</section>
+
+{{/layouts/main}}

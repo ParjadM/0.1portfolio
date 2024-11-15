@@ -1,0 +1,42 @@
+{{!-- profile.hbs --}}
+{{#> layouts/main}}
+<link rel="stylesheet" href="/css/profile.css">
+<section id="profile">
+    <div class="container">
+        <h2>My Profile</h2>
+
+        <div class="profile-info">
+            <div class="form-group">
+                <label>Username:</label>
+                <span>{{username}}</span>
+            </div>
+            <div class="form-group">
+                <label>Email:</label>
+                <span>{{email}}</span>
+            </div>
+            <div class="form-group">
+                <label>First Name:</label>
+                <span>{{firstName}}</span>
+            </div>
+            <div class="form-group">
+                <label>Last Name:</label>
+                <span>{{lastName}}</span>
+            </div>
+            <div class="form-group">
+                <label>Date of Birth:</label>
+                <span>{{formatDate dateOfBirth format="ddd MMM DD YYYY"}}</span>
+            </div>
+            <div class="form-group">
+                <label>Gender:</label>
+                <span>{{gender}}</span>
+            </div>
+            <div class="form-group">
+                <label>Address:</label>
+                <span>{{address}}</span>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{{/layouts/main}}
